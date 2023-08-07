@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    
+
+}
+
+.min-h-screen{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 245, 245);
+    overflow: hidden;
+}
+.tabs input
+{
+    visibility: hidden;
+    display: none;
+
+}
+.tabs input:nth-child(1):checked ~ .buttons 
+label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons 
+label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons 
+label:nth-child(3)
+{
+    opacity: 1;
+    width: 50px;
+}
+.content
+{
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 0.5;
+}
+.content .box
+{
+    position:relative;
+    width: 200vw;
+    height: 87vh;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    padding: 40px;
+}
+.content .box:nth-child(1)
+{
+    background:linear-gradient(90deg, hwb(318 3% 84%), #aa0e4f);
+   
+    
+}
+.content .box:nth-child(2)
+{
+    background:linear-gradient(90deg, #ee94da, #15015c);
+}
+.content .box:nth-child(3)
+{
+    background:linear-gradient(90deg, #3d3c3c, #f5be59);
+}
+.buttons
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10000000;
+}
+.buttons label
+{
+    width: 20px;
+    height: 20px;
+    background: #f5f3f3;
+    opacity:0.5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.tabs input:nth-child(1):checked ~ .content
+{
+    left: 0;
+}
+.tabs input:nth-child(2):checked ~ .content
+{
+    left: -100vw;
+}
+.tabs input:nth-child(3):checked ~ .content
+{
+    left: -200vw;
+}
+
+.content .box .contentBx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.content .box .contentBx ion-icon
+{
+    font-size: 8em;
+    color: #0a0a0a;
+    --ionicon-stroke-width: 10px;
+}
+.content .box .contentBx h2
+{
+    font-size: 3em;
+    color: azure;
+
+}
+.content .box .contentBx p
+{
+    font-size: 1.2em;
+    color: azure;
+    max-width: 700px;
+    text-align: center;
+}
+.content .box .contentBx button
+{
+font-size: 1.2em;
+text-decoration: none;
+text-transform: uppercase;
+padding: 15px 35px;
+background: #f7f4f7;
+color: rgb(88, 2, 45);
+letter-spacing: 0.05em;
+margin-top: 10px;
+font-weight: 600;
+border: none;
+border-radius: 40px;
+transition: 0.5s;
+}
+.content .box .contentBx button:hover
+{
+    letter-spacing: 0.2em;
+}
+
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.font-bold{
+    font-weight: bold;
+}
+.item-center{
+    align-items: center;
+}
+
+.img{
+    height: 300px;
+    width: 100%;
+}
+.img1{
+    height: 300px;
+    width: 100%;
+    
+}
+.img2{
+    height: 100px;
+    width: 100%;
+    
+}
+.my-1{
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-size: 400%;
+    align-items: center;
+    color: #f1efef;
+}
+.my-2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 400%;
+    align-items: center;
+    color: rgb(239, 239, 241);
+}
+.my-3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 400%;
+    align-items: center;
+    color: rgb(241, 240, 245);
+}
+.px-2{
+    padding-left: 13px;
+    padding-right: 13px;
+}
+.topright{
+    width: 50%;
+    height: 200%;
+    align-items: center;
+
+}
+.topleft{
+    width: 50%;
+    height: 80%;
+    font-size: 140%;
+    color: black;
+
+}
+.section1
+{
+    height: 50vh;
+    margin-top: 6%;
+}
+.p2{
+    background-color: #0b0b0c;
+}
+
+  /* Float four columns side by side */
+.column {
+    background-image: url(c3.jpg);
+    float: left;
+    width: 28%;
+    height: 50%;
+    padding: 0 10px;
+    margin-top: 10%;
+    align-content: center;
+    margin-left: 3%;
+  }
+.row 
+{margin: 0 -5px;}
+.row:after
+ {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card 
+  {
+    padding: 16px;
+    text-align: center;
+  }
